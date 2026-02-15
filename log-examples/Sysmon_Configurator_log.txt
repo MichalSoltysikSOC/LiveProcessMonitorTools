@@ -1,0 +1,240 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260215110439
+Username: MIKEWAVECS\MikeWave
+RunAs User: MIKEWAVECS\MikeWave
+Configuration Name: 
+Machine: MIKEWAVECS (Microsoft Windows NT 6.2.9200.0)
+Host Application: C:\Users\mikew\Downloads\SysmonConfigurator.exe
+Process ID: 11752
+PSVersion: 5.1.26100.7705
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7705
+BuildVersion: 10.0.26100.7705
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+STATUS
+------
+Sysmon service present:               True
+Sysmon service name:                  Sysmon
+Sysmon service status:                Running
+Sysmon directory exists:              False
+Sysmon zip exists:                    False
+Sysmon executable found:              True
+Sysmon executable path:               C:\Windows\Sysmon.exe
+Scripts directory exists:             True
+Config file exists:                   False
+Config has required filters:          False
+
+Explanation: Sysmon config file is missing.
+Impact: Install/Reconfigure cannot apply the intended rules.
+Tip: Use option 3 to create the config, then option 4 to install (or option 5 to reconfigure).
+
+
+Required Event IDs:
+- Event ID 1 (Process creation)
+- Event ID 5 (Process terminated)
+- Event ID 3 (Network connection detected)
+
+Operation completed: status displayed successfully.
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+VERIFICATION
+------------
+Sysmon service present:               True
+Sysmon service name:                  Sysmon
+Sysmon service status:                Running
+Sysmon executable found:              True
+Sysmon executable path:               C:\Windows\Sysmon.exe
+Config file exists:                   False
+Config file path:                     C:\Scripts\SysmonLiveProcessMonitorConfig.xml
+Config has required filters:          False
+Sysmon event log exists:              True
+Sysmon event log name:                Microsoft-Windows-Sysmon/Operational
+Sysmon event log readable:            True
+Verification time window:             last 15 minutes
+Event ID 1 observed recently:         True (count: 93)
+Event ID 5 observed recently:         True (count: 107)
+Event ID 3 observed recently:         False (count: 0)
+
+Operation completed: verification displayed successfully.
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+Operation completed: Sysmon downloaded and extracted successfully.
+Located executable: C:\Scripts\Sysmon\Sysmon64.exe
+
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+Operation completed: configuration file saved successfully.
+Config path: C:\Scripts\SysmonLiveProcessMonitorConfig.xml
+Config has required filters: True
+
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+Operation completed: Sysmon reconfigured successfully using the config.
+
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+STATUS
+------
+Sysmon service present:               True
+Sysmon service name:                  Sysmon
+Sysmon service status:                Running
+Sysmon directory exists:              True
+Sysmon zip exists:                    True
+Sysmon executable found:              True
+Sysmon executable path:               C:\Scripts\Sysmon\Sysmon64.exe
+Scripts directory exists:             True
+Config file exists:                   True
+Config has required filters:          True
+
+Required Event IDs:
+- Event ID 1 (Process creation)
+- Event ID 5 (Process terminated)
+- Event ID 3 (Network connection detected)
+
+Operation completed: status displayed successfully.
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+VERIFICATION
+------------
+Sysmon service present:               True
+Sysmon service name:                  Sysmon
+Sysmon service status:                Running
+Sysmon executable found:              True
+Sysmon executable path:               C:\Scripts\Sysmon\Sysmon64.exe
+Config file exists:                   True
+Config file path:                     C:\Scripts\SysmonLiveProcessMonitorConfig.xml
+Config has required filters:          True
+Sysmon event log exists:              True
+Sysmon event log name:                Microsoft-Windows-Sysmon/Operational
+Sysmon event log readable:            True
+Verification time window:             last 15 minutes
+Event ID 1 observed recently:         True (count: 5)
+Event ID 5 observed recently:         True (count: 5)
+Event ID 3 observed recently:         True (count: 190)
+
+Operation completed: verification displayed successfully.
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+Operation completed with warnings or errors.
+Explanation: System Monitor v15.15 - System activity monitor
+Tip: If Sysmon is already installed, use option 5 (reconfigure) or option 6 (uninstall) then option 4 (install).
+
+
+
+
+
+1. Quick Sysmon status check
+2. Download and extract Sysmon (C:\Scripts\Sysmon)
+3. Create or overwrite Sysmon config (C:\Scripts\SysmonLiveProcessMonitorConfig.xml)
+4. Install Sysmon using config (auto-locate Sysmon)
+5. Reconfigure Sysmon using config (auto-locate Sysmon)
+6. Uninstall Sysmon (auto-locate Sysmon)
+7. Sysmon telemetry verification (Event ID 1, 3, 5 - last 15 minutes)
+8. Exit
+
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260215111423
+**********************
